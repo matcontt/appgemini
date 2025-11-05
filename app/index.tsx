@@ -1,6 +1,7 @@
 import { Button } from "@/components/Button";
 import { PromptText } from "@/components/PromptText";
 import { ResponseBox } from "@/components/ResponseBox";
+import '@/global.css';
 import axios from "axios";
 import { useState } from "react";
 import { KeyboardAvoidingView, ScrollView, View, Text } from "react-native";
