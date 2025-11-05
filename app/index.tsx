@@ -4,7 +4,7 @@ import { ResponseBox } from "@/components/ResponseBox";
 import '@/global.css';
 import axios from "axios";
 import { useState } from "react";
-import { KeyboardAvoidingView, ScrollView, View, Text } from "react-native";
+import { KeyboardAvoidingView, ScrollView, Text, View } from "react-native";
 
 export default function Index() {
   const [value, setValue] = useState("");
@@ -19,7 +19,7 @@ export default function Index() {
 
     try {
       const response = await axios.post(
-        "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0:generateContent",
+        "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent",
         {
           contents: [
             {
@@ -36,7 +36,7 @@ export default function Index() {
         {
           headers: {
             "Content-Type": "application/json",
-            "X-goog-api-key": API_KEY,
+            "x-goog-api-key": API_KEY,
           },
         }
       );
@@ -56,7 +56,9 @@ export default function Index() {
     <KeyboardAvoidingView className="flex-1 bg-gray-900">
       <ScrollView contentContainerClassName="p-6 items-center">
         <View className="mb-6">
-          <Text className="text-3xl font-bold text-pink-500 text-center">Gemini Creativo</Text>
+          <Text className="text-3xl font-bold text-pink-500 text-center">
+            {isCreativeMode ? "Gemini Creativo" : "Gemini Normal"}
+          </Text>
         </View>
         <View className="w-full max-w-md">
           <PromptText onChangeText={setValue} value={value} />
