@@ -34,6 +34,12 @@ You can start developing by editing the files inside the **app** directory. This
 https://github.com/user-attachments/assets/026752b3-3ccb-43d9-8d75-1ed2eeb93056
 
 
+## VIDEO
+
+
+https://github.com/user-attachments/assets/95d801b8-aaae-40ba-9e60-7a47c0706439
+
+
 
 ## Get a Fresh Project
 When you're ready, run:
@@ -42,4 +48,8 @@ npm run reset-project
 
 
 
+
+
+
+https://github.com/user-attachments/assets/c69d9fa8-fe53-4067-ae4f-398cde29c003
 
